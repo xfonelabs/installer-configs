@@ -92,19 +92,15 @@ operating_systems:
           - core:download:
               group: "firmware"
               files:
-                - url: "https://github.com/rubencarneiro/billie2/releases/download/1.0/boot.img"
+                - url: "https://cdn.xfonelabs.com/cdimage/billie2/recovery.img"
                   checksum:
-                    sum: "9558a382154ecccbf0fcac75dd13f4865523158d86e347b05a46511139dedaab"
+                    sum: "b73d1b5b264be2779d9448209e6feb9c7a3a78c609a1d6d68b4761838bac5949"
                     algorithm: "sha256"
-                - url: "https://github.com/rubencarneiro/billie2/releases/download/1.0/recovery.img"
-                  checksum:
-                    sum: "fa249bf4d71fcc135456af90ca4e8d8175e3d10dbc5053792a0cf5ba14114d29"
-                    algorithm: "sha256"
-                - url: "https://github.com/rubencarneiro/billie2/releases/download/1.0/dtbo.img"
+                - url: "https://cdn.xfonelabs.com/cdimage/billie2/dtbo.img"
                   checksum:
                     sum: "47eac9731ffbdea4373acb60eeb30837642d3e69773a65f71125b304390225dc"
                     algorithm: "sha256"
-                - url: "https://github.com/rubencarneiro/billie2/releases/download/1.0/vbmeta.img"
+                - url: "https://cdn.xfonelabs.com/cdimage/billie2/vbmeta.img"
                   checksum:
                     sum: "06ad2b775ec21134aa935eb6e0a48514198822ee7bfb1773f27cc006a0c6e427"
                     algorithm: "sha256"       
@@ -114,9 +110,6 @@ operating_systems:
       - actions:
           - fastboot:flash:
               partitions:
-                - partition: "boot"
-                  file: "boot.img"
-                  group: "firmware"
                 - partition: "recovery"
                   file: "recovery.img"
                   group: "firmware"
